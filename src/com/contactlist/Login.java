@@ -9,11 +9,12 @@ import java.awt.SystemColor;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -26,8 +27,8 @@ import javax.swing.border.LineBorder;
 public class Login extends JFrame implements Textable {
 
 	private JPasswordField passwordtxf;
-	private ImageIcon okImg;
-	private JButton submitbtn;
+	  private ImageIcon okImg, okOverImg;
+	private JLabel submitbtn;
 	private JComboBox<Language> langcmb;
 	private JLabel aboutUslbl;
 
@@ -36,7 +37,9 @@ public class Login extends JFrame implements Textable {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(
 				Login.class.getResource("/images/c_logo.png")));
 		getContentPane().setBackground(new Color(255, 0, 0));
+
 		okImg = new ImageIcon(Login.class.getResource("/images/ok.png"));
+		okOverImg = new ImageIcon(Login.class.getResource("/images/ok_over.png"));
 		new ImageIcon(Login.class.getResource("/images/ok_over.png"));
 
 		JLabel backgroundImage = new JLabel();
@@ -57,8 +60,7 @@ public class Login extends JFrame implements Textable {
 		backgroundImage.add(passwordtxf);
 		passwordtxf.setColumns(10);
 
-		submitbtn = new JButton("");
-		submitbtn.setContentAreaFilled(false);
+		submitbtn = new JLabel("");
 		submitbtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		submitbtn.setIcon(okImg);
 		submitbtn.setBounds(250, 150, 40, 45);
@@ -90,8 +92,9 @@ public class Login extends JFrame implements Textable {
 		backgroundImage.add(aboutUslbl);
 
 		// ====================== Actions =============================
-		submitbtn.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
+		submitbtn.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
 				String password = new String(passwordtxf.getPassword());
 
 				try {
@@ -117,7 +120,22 @@ public class Login extends JFrame implements Textable {
 					e.printStackTrace();
 				}
 			}
-		});
+			
+		
+
+			@Override
+			public void mouseEntered(MouseEvent arg0) {
+				submitbtn.setIcon(okOverImg);
+				
+			}
+
+			@Override
+			public void mouseExited(MouseEvent arg0) {
+				submitbtn.setIcon(okImg);
+				
+			}
+
+			});
 
 		LanguageEngine.registerUI(this);
 	}
