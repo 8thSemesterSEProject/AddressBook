@@ -4,3 +4,4 @@ public interface Textable {
 
 	void updateText();
 }
+ 

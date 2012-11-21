@@ -26,7 +26,7 @@ public class DBConnection {
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-	}
+	} 
 
 	public static int executeUpdate(String sql) throws SQLException {
 		if (conn == null)

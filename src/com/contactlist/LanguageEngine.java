@@ -20,7 +20,7 @@ public class LanguageEngine {
 	public static void registerUI(Textable textableUI) {
 		textableUIs.add(textableUI);
 		textableUI.updateText();
-	}
+	} 
 
 	public static void unregisterUI(Textable textableUI) {
 		textableUIs.remove(textableUI);

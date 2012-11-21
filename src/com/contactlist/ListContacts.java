@@ -41,7 +41,7 @@ public class ListContacts extends JPanel implements Textable {
 			@Override
 			public boolean isCellEditable(int row, int column) {
 				return column != 0;
-			}
+			} 
 		});
 		table.getColumn("").setCellRenderer(new DefaultTableCellRenderer() {
 			@Override

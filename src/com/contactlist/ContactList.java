@@ -37,7 +37,7 @@ public class ContactList extends JFrame implements Textable {
 	private JMenuItem englishbtn;
 	private JMenuItem daribtn;
 	private JMenuItem classicbtn;
-	private JMenuItem windowsbtn;
+	private JMenuItem windowsbtn; 
 	private JTabbedPane content;
 
 	public ContactList() {

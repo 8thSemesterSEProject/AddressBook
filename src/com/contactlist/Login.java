@@ -22,7 +22,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
-
+ 
 @SuppressWarnings("serial")
 public class Login extends JFrame implements Textable {
 

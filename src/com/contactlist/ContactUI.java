@@ -51,7 +51,7 @@ public class ContactUI extends JPanel implements Textable {
 	private JLabel phonelbl;
 	private JLabel emailbl;
 	private JLabel websitelbl;
-	private JLabel addresslbl;
+	private JLabel addresslbl; 
 	private JTextField jobtxf;
 	private JTextField companytxf;
 	private JTextField cmobiletxf;

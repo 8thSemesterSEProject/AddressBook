@@ -35,7 +35,7 @@ public class CategoryUI extends JPanel implements Textable {
 	private JPanel controlpnl;
 	private JButton savebtn;
 	private JButton deletebtn;
-	private JTextArea descriptiontxf;
+	private JTextArea descriptiontxf; 
 
 	private int currentCategoryId = -1;
 

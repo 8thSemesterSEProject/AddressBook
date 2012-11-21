@@ -32,7 +32,7 @@ public class AdvanceSearchListContacts extends JPanel implements Textable {
 	private JComboBox<SearchNode> columnNames;
 	private JButton searchbtn;
 	private Component gap_1;
-	private Component gap_2;
+	private Component gap_2; 
 
 	public AdvanceSearchListContacts() {
 		setLayout(new BorderLayout(0, 0));
